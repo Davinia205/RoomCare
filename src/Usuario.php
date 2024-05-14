@@ -232,6 +232,20 @@ class Usuario extends Conexion
         }
     }
 
+    function recuperarUsuarios()
+  {
+      $consulta = "select * from usuarios order by nombre";
+      $stmt = $this->conexion->prepare($consulta);
+      try {
+          $stmt->execute();
+      } catch (PDOException $ex) {
+          die("Error al recuperar datos: " . $ex->getMessage());
+      }
+      return $stmt;
+  }
+
+    
+
 }
 
 

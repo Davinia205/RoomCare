@@ -25,7 +25,7 @@ class Conexion
          * Contructor de la conexión con la base de datos
          */
         $this->host = "localhost";
-        $this->db = "perfectroom";
+        $this->db = "roomcare";
         $this->username = "gestor";
         $this->password = "secreto";
         $this->dsn = "mysql:host={$this->host};dbname={$this->db};charset=utf8mb4";

@@ -442,7 +442,7 @@ public function updateSalida($id_habitacion, $situacion){
 
     try {
    
-        $sql = "UPDATE habitaciones SET salida = :situacion WHERE id_habitacion = :id_habitacion";
+        $sql = "UPDATE habitaciones SET salida = :situacion, estado = 'sin revisar' WHERE id_habitacion = :id_habitacion";
         
         // Prepare the SQL statement
         $stmt = $this->conexion->prepare($sql);
